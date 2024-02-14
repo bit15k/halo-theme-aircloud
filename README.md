@@ -19,38 +19,53 @@
 <img width="50%" src="https://hexo.io/themes/screenshots/AirCloud@2x.jpg">
 </p>
 
-预览：[ByteVoyage](https://bytevoyage.site/)
+**主题预览：[ByteVoyage](https://bytevoyage.site/)**
 
-文档：部分配置请参考 []()
+**主题文档：[详细文档参考]()**  
+
 ## 主题介绍
-以下引用<a href="https://github.com/aircloud/hexo-theme-aircloud">原作者</a>对主题的说明  
 
-Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题,旨在将中心放在博文本身.  
+该主题移植于 [Hexo-Theme-AirCloud](https://github.com/aircloud/hexo-theme-aircloud), 原作者 [Xiaotao Nie](https://niexiaotao.cn/) , 感谢作者开发出该主题.  
 
-因此, 默认没有大范围的主题色块, 图片铺排等, 也不要求每片博文配图, 一方面这并不是我们记录知识的重点, 另外一方面可能程序员群体并没有足够的素材,容易造成主题纠纷.  
+以下引用 <a href="https://github.com/aircloud/hexo-theme-aircloud">原作者</a> 对主题的说明  
 
-建议通过不冗余的内容进行传达,比如默认没有博文摘要,因为不少开发者写博客的时候没有写博文摘要,如果从博客前一部分截取往往不能表达完整思想.
+**Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题,旨在将中心放在博文本身.**  
 
-## 安裝
+因此, 默认没有大范围的主题色块, 图片铺排等, 也不要求每片博文配图, 一方面这并不是我们记录知识的重点, 另外一方面可能程序员群体并没有足够的素材, 容易造成主题纠纷.  
 
-### 下载安装
-下载[releases](https://github.com/jiewenhuang/halo-theme-joe3.0/releases)或者直接[下载代码](https://github.com/jiewenhuang/halo-theme-joe3.0)，通过 Halo Console 后台主题安装处上传即可。
+通过不冗余的内容进行传达, 比如默认没有博文摘要,因为不少开发者写博客的时候没有写博文摘要, 如果从博客前一部分截取往往不能表达完整思想.
+## 主题功能
+
+- 支持自定义头像
+- 支持自定义菜单, 灵活显示菜单
+- 支持自定义留言板, 关于我等页面
+- 支持自定义版权
+- 支持备案信息
+- 支持展示常用社交信息
+- 支持展示简洁友链
+- 支持搜索插件
+- 支持busuanzi统计
+- 支持文章缩进
+- 支持归档, 标签, 分类页面
+- 支持代码高亮插件
+- 支持文章目录
+- 支持评论插件  
+...
+
+## 下载安裝
+
+1.[下载地址](https://github.com/bit15k/halo-theme-aircloud/releases) , 下载zip安装包后,通过Halo后台主题管理上传.  
+
+2.直接拉取主分支代码  
 
 ## 使用说明
-> 1、首次使用请先把主题所有配置保存一遍  
-> 2、部分功能使用插件进行实现  
-> 3、请配合Halo2.8.0及以上版本使用  
-> 4、菜单栏的图标请使用[iconfont](https://www.iconfont.cn/)的图标，需要填入Font Family 和图标代码例如：`jiewen joe-icon-tupian`  
-> 5、使用自定义标签样式请安装[Tool-Bench](https://github.com/DioxideCN/Tool-Bench)插件，标签请参考[Joe3部分样式](https://www.jiewen.run/archives/joe3style)或者直接使用插件标签
-
-- [x] 卡片化设计
-- 
 
 
 
 
 
-### 贡献
+
+## 主题贡献
 
 > 如果你想帮助完善 `` 主题，请：
 
