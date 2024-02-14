@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::category-posts},pager = null)}"
+>
+<!-- 标签列表 -->
+<div class="one-tag-list" th:fragment="category-posts">
+                <span class="fa fa-tag listing-seperator" th:id="${category.spec.displayName}">
+                    <span class="tag-text" th:text="${category.spec.displayName}"></span>
+                </span>
+
+  <!-- <li class="listing-item">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li> -->
+  <th:block th:each="post : ${posts.items}">
+    <div class="post-preview">
+      <a th:href="${post.status.permalink}">
+        <h2 class="post-title" th:text="${post.spec.title}">
+
+        </h2>
+
+      </a>
+      <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+
+  </th:block>
+
+</div>
+</html>
+

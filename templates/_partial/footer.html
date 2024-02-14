@@ -1,0 +1,120 @@
+<footer class="footer" th:fragment="footer">
+    <!-- social control s    -->
+    <ul class="list-inline text-center">
+        <th:block th:if="${theme.config.social.ac_dispaly_social}">
+            <ul class="list-inline text-center">
+                <th:block th:if="${theme.config.social.ac_twitter_url}">
+                    <li>
+                        <a target="_blank" th:href="'https://twitter.com/'+${theme.config.social.ac_twitter_url}">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-twitter"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${theme.config.social.ac_zhihu_url}">
+                    <li>
+                        <a target="_blank"
+                           th:href="'https://www.zhihu.com/people/'+${theme.config.social.ac_zhihu_url}">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${theme.config.social.ac_weibo_url}">
+
+                    <li>
+                        <a target="_blank" href="'http://weibo.com/'+${theme.config.social.ac_twitter_url}">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${theme.config.social.ac_facebook_url}">
+
+                    <li>
+                        <a target="_blank" href="'https://www.facebook.com/'+${theme.config.social.ac_facebook_url}">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-facebook"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${theme.config.social.ac_github_url}">
+
+                    <li>
+                        <a target="_blank" href="'https://github.com/'+${theme.config.social.ac_github_url}">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+                <th:block th:if="${theme.config.social.ac_linkedin_url}">
+
+                    <li>
+                        <a target="_blank" href="'https://www.linkedin.com/in/'+${theme.config.social.ac_linkedin_url}">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-linkedin"></i>
+                            </span>
+                        </a>
+                    </li>
+                </th:block>
+
+
+            </ul>
+        </th:block>
+    </ul>
+    <!-- social control e   -->
+
+    <!-- site friends links control s    -->
+    <p>
+        <span></span>
+
+        <span><a href=""></a></span>
+        <span></span>
+
+    </p>
+    <!-- site friends links control e   -->
+
+    <!--busuanzi js control s-->
+    <th:block th:if="${theme.config.count.ac_display_count}">
+        <p>
+            <th:block th:with="stats = ${siteStatsFinder.getStats()}">
+            <span th:if="${theme.config.count.ac_count_pv==1}">
+                <span th:text="${stats.visit}"></span>次浏览
+            </span>
+            <span th:if="${theme.config.count.ac_count_pv==2}" id="busuanzi_container_site_pv">
+                <span id="busuanzi_value_site_pv"></span>次浏览
+            </span>
+            <span th:if="${theme.config.count.ac_count_uv==1}" id="busuanzi_container_site_uv" >
+                <span id="busuanzi_value_site_uv"></span>位访客
+            </span>
+            <span >
+                <span th:text="${stats.post}"></span>篇文章
+                <span th:text="${stats.category}"></span>条分类
+                <span th:text="${stats.comment}"></span>条评论
+            </span>
+            </th:block>
+
+        </p>
+    </th:block>
+
+    <!-- beian   -->
+    <p th:if="${theme.config.case.ac_case_gxb}!=''">
+
+
+    <span><a href="beian.miit.gov.cn" th:text="${theme.config.case.ac_case_gxb}"></a></span>
+    <span><a href="https://beian.mps.gov.cn/#/query/webSearch" th:text="' / '+${theme.config.case.ac_case_ga}"></a></span>
+
+
+    </p>
+    <!-- copyright info   -->
+    <p>©<span th:text="${theme.config.basic.ac_copyright}">2018-2024</span>.<span> All Rights Reserved <span th:text="${theme.config.basic.ac_name}">bit15k</span> </span>Created By <a target="_blank" rel="noopener" href="https://halo.run/">Halo</a> Theme <a target="_blank"
+                                                                                               rel="noopener" href="">AirCloud</a>
+    </p>
+</footer>
+
+

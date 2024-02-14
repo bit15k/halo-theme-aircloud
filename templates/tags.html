@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::tags-content},pager = null)}"
+>
+<div id='tag_cloud' class="tags" th:fragment="tags-content">
+  <th:block th:if="${#lists.size(tags)>0}">
+    <th:block th:each="tag:${tags}">
+      <a th:href="${tag.status.permalink}" class="tag-triangle" title="${tag}"><i class="tag-i" th:text="${tag.spec.displayName}+' ['+${tag.status.postCount}+']'"></i></a>
+    </th:block>
+  </th:block>
+  <th:block th:if="${#lists.size(tags)==0}">
+    <a href="/" class="tag-triangle" title="当前无标签"><i class="tag-i" text="当前无标签"></i></a>
+  </th:block>
+
+</div>
+<!-- 标签列表 -->
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="编程综合">
+                    <span class="tag-text">编程综合</span>
+                </span>
+
+  <!-- <li class="listing-item">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li> -->
+  <div class="post-preview">
+    <a href="/2022/04/25/一些代码提交MR的重点关注内容整理/">
+      <h2 class="post-title">
+        我们应该如何进行 Code Review ?
+      </h2>
+
+    </a>
+    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+  </div>
+
+</div>
+</html>

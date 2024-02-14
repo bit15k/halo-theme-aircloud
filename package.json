@@ -1,0 +1,27 @@
+{
+  "name": "theme-starter",
+  "version": "1.0.0",
+  "description": "Halo 2.0 的基础主题开发模板，包含了主题的基本目录结构。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halo-dev/theme-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halo-dev/theme-starter/issues"
+  },
+  "homepage": "https://github.com/halo-dev/theme-starter#readme",
+  "dependencies": {
+    "@firstandthird/toc": "^2.1.0",
+    "hexo-util": "^3.2.0",
+    "import": "^0.0.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

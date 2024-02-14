@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{layout :: html(head = null,content = ~{::post-content},pager = null)}"
+>
+<div class="post-container" th:fragment="post-content">
+    <div class="post-title" th:text="${post.spec.title}"></div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span></span>
+        <!--post tag s    -->
+        <th:block th:if="${#lists.size(post.tags)>0}">
+        <span class="attr">标签：/
+            <th:block th:each="tag:${post.tags}">
+                <a class="tag" href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
+            </th:block>
+        <span></span>
+        </span>
+        </th:block>
+        <!--post tag e    -->
+        <span class="attr">访问：<span id="busuanzi_value_page_pv" th:text="${post.stats.visit}">352</span>
+</span>
+
+    </div>
+
+    <div th:class="${theme.config.post.ac_no_indent}? 'post-content no-indent':'post-content'">
+        <div th:utext="${post.content.content}"></div>
+        <!--捐赠待做-->
+        <br/>
+        <!-- default comment halo comment s     -->
+        <div id="comment-container">
+
+            <th:block th:if="${haloCommentEnabled}">
+                <th:block th:if="${post.spec.allowComment}">
+                    <halo:comment
+                            group="content.halo.run"
+                            kind="Post"
+                            th:attr="name=${post.metadata.name}"
+                            colorScheme="'light'"
+                    />
+                <th:block th:if="${haloCommentEnabled}">
+            </th:block>
+
+        </div>
+        <!-- default comment halo comment e  -->
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+
+
+</div>
+
+</html>

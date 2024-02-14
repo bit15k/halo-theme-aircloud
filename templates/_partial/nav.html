@@ -1,0 +1,106 @@
+<div class="nav" id="nav" th:fragment="nav">
+    <div class="avatar-name">
+        <div th:class="${theme.config.basic.ac_avatar_circle} ? 'avatar radius':'avatar' ">
+            <!--nav logo s-->
+            <img th:src="${theme.config.basic.ac_avatar?:'@{/assets/imgs/avatar.jpg}'}"/>
+            <!--nav logo e-->
+        </div>
+        <div class="name">
+            <!--author s-->
+            <i th:text="${theme.config.basic.ac_name}"></i>
+            <!--author e-->
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <th:block th:if="${theme.config.menu.ac_dispaly_category}">
+                <li>
+                    <a href="/categories">
+                        <i class="iconfont icon-shoucang1"></i>
+                        <span>分类</span>
+                    </a>
+                </li>
+            </th:block>
+            <th:block th:if="${theme.config.menu.ac_dispaly_tag}">
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            </th:block>
+            <th:block th:if="${theme.config.menu.ac_dispaly_archive}">
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>归档</span>
+                </a>
+            </li>
+            </th:block>
+            <th:block th:if="${theme.config.menu.ac_dispaly_links}">
+
+            <li>
+                <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_links_url).status.permalink}">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>友链</span>
+                </a>
+            </li>
+            </th:block>
+<!--            <p th:text="${theme.config.menu.ac_dispaly_tag}"></p>-->
+<!--            <p th:text="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}"></p>-->
+
+            <th:block th:if="${theme.config.menu.ac_dispaly_wall}">
+
+            <li>
+                <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>留言</span>
+                </a>
+            </li>
+            </th:block>
+            <th:block th:if="${theme.config.menu.ac_dispaly_about}">
+
+            <li>
+                <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_about_url).status.permalink}">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            </th:block>
+            <!-- halo search  -->
+            <li th:if="${pluginFinder.available('PluginSearchWidget')}">
+                <a id="search" href="javascript:SearchWidget.open()">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+    <!-- toc gen by js   -->
+    <div id="toc" class="toc-article toc-fixed"></div>
+
+</div>
+
+
+<div class="search-field" id="search-field" th:fragment="search-field">
+<!--    <div class="search-bg" id="search-bg"></div>-->
+<!--    <div class="search-container">-->
+<!--        <div class="search-input">-->
+<!--            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>-->
+<!--            <input id="search-input">-->
+<!--            <span id="begin-search">search</span>-->
+<!--        </div>-->
+<!--        <div class="search-result-container" id="search-result-container">-->
+
+<!--        </div>-->
+<!--    </div>-->
+</div>

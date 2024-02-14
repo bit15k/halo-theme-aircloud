@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{layout :: html(head = null,content = ~{::archives},pager = ~{::pager-archives})}"
+>
+<div class="archives-container" th:fragment="archives">
+    <th:block th:each="archive : ${archives.items}">
+        <div class="one-tag-list">
+                <span class="fa fa-calendar-times-o listing-seperator" th:id="${archive.year}">
+                    <span class="tag-text" th:text="${archive.year}"></span>
+                </span>
+            <ul>
+
+                <!-- <li class="listing-item">
+                <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                </li> -->
+                <th:block th:each="month : ${archive.months}">
+                    <li th:each="post : ${month.posts}">
+                        <span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        <a th:href="@{${post.status.permalink}}">
+                        <span th:text="${post.spec.title}">
+
+                        </span>
+                        </a>
+                        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                    </li>
+                </th:block>
+
+
+            </ul>
+        </div>
+    </th:block>
+
+
+
+</div>
+<ul class="pager" th:fragment="pager-archives">
+    <th:block th:if="${archives.hasPrevious()}">
+        <li class="previous">
+            <a th:href="@{${archives.prevUrl}}">← 上一页</a>
+        </li>
+
+    </th:block>
+    <th:block th:if="${archives.hasNext()}">
+        <li class="next">
+            <a th:href="@{${archives.nextUrl}}">下一页 →</a>
+        </li>
+
+    </th:block>
+
+</ul>
+</html>
+
+

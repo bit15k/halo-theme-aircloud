@@ -1,0 +1,270 @@
+apiVersion: v1alpha1
+kind: Setting
+metadata:
+  name: AirCloud-setting
+spec:
+  forms:
+    - group: basic
+      label: 基础设置
+      formSchema:
+
+        - $formkit: text
+          name: ac_name
+          label: 侧边栏用户名
+          help: "用于侧边栏用户名和页脚版权用户名"
+          value: "AirCloud"
+
+        - $formkit: attachment
+          name: ac_avatar
+          label: 侧边栏头像
+          accepts:
+            - "image/png"
+            - "image/jpeg"
+          value: ""
+        - $formkit: radio
+          name: ac_avatar_circle
+          label: 头像是否圆角
+          help: ""
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: text
+          name: ac_page_desc
+          label: 所有页面上方描述
+          value: "sometimes code, sometimes design"
+        - $formkit: text
+          name: ac_copyright
+          label: 页脚版权时间
+          help: "只填写时间,如2018或2018-2024"
+          value: "2018-Now"
+
+    - group: menu
+      label: 菜单设置
+      formSchema:
+        - $formkit: radio
+          name: ac_dispaly_links
+          label: 是否显示友链
+          help: "菜单栏默认不显示友链,开启友链需要先安装链接管理插件,页面地址为/links"
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+#        - $formkit: singlePageSelect
+#          name: ac_links_url
+#          help: "从自建的独立页面选择一个作为友链页面"
+#          label: 指定友链页面
+#          value: ''
+        - $formkit: radio
+          name: ac_dispaly_wall
+          label: 是否显示留言板
+          help: "菜单栏默认不显示留言板"
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: singlePageSelect
+          name: ac_wall_url
+          help: "从自建的独立页面选择一个作为留言板页面"
+          label: 指定留言页面
+          value: ""
+        - $formkit: radio
+          name: ac_dispaly_about
+          label: 是否显示关于
+          value: false
+          help: "关于一般放网站介绍或个人介绍等信息,菜单栏默认不显示关于"
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: singlePageSelect
+          name: ac_about_url
+          help: "从自建的独立页面选择一个作为留言板页面"
+          label: 指定关于页面
+          value: ""
+        - $formkit: radio
+          name: ac_dispaly_tag
+          value: true
+          label: 是否显示标签
+          help: "菜单栏默认显示标签"
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: radio
+          name: ac_dispaly_category
+          label: 是否显示分类
+          help: "菜单栏默认不显示分类"
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: radio
+          name: ac_dispaly_archive
+          label: 是否显示归档
+          help: "菜单栏默认显示归档"
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: radio
+          name: ac_dispaly_search
+          label: 是否显示搜索
+          value: true
+          help: "菜单栏默认显示搜索,但需安装搜索插件"
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+
+
+    - group: count
+      label: 统计设置
+      formSchema:
+        - $formkit: radio
+          name: ac_display_count
+          label: 是否启用页脚统计
+          value: true
+          help: "启用后下面的设置才有效"
+          options:
+            - value: true
+              label: 启用
+            - value: false
+              label: 关闭
+        - $formkit: radio
+          name: ac_count_pv
+          label: 是否显示页脚访问量
+          help: ""
+          value: 1
+          options:
+            - value: 1
+              label: 启用halo自带统计
+            - value: 2
+              label: 启用busuanzi统计
+            - value: 0
+              label: 关闭
+        - $formkit: radio
+          name: ac_count_uv
+          label: 是否显示页脚访客量
+          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          value: 1
+          options:
+
+            - value: 1
+              label: 启用busuanzi统计
+            - value: 0
+              label: 关闭
+        - $formkit: radio
+          name: ac_count_post
+          label: 是否显示页脚文章数
+          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          value: 1
+          options:
+
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
+        - $formkit: radio
+          name: ac_count_category
+          label: 是否显示页脚分类数
+          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          value: 1
+          options:
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
+        - $formkit: radio
+          name: ac_count_comment
+          label: 是否显示页脚评论数量
+          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          value: 1
+          options:
+
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
+    - group: post
+      label: 文章设置
+      formSchema:
+        - $formkit: radio
+          name: ac_no_indent
+          label: 是否启用文章首行缩进
+          help: "默认关闭"
+          value: false
+          options:
+            - value: true
+              label: 否
+            - value: false
+              label: 是
+    - group: social
+      label: 社交设置
+      formSchema:
+        - $formkit: radio
+          name: ac_dispaly_social
+          label: 是否显示页面底部社交图标
+          help: "默认开启,开启后下面配置才生效"
+          value: false
+          options:
+            - value: true
+              label: 是
+            - value: false
+              label: 否
+        - $formkit: text
+          label: "Gihub用户名"
+          name: "ac_github_url"
+          value: "bit15k"
+          help: "填写后即开启,清空则不显示该图标,下同"
+        - $formkit: text
+          name: "ac_zhihu_url"
+          label: "知乎用户名"
+          value: ""
+        - $formkit: text
+          name: "ac_weibo_url"
+          label: "微博用户名"
+          value: ""
+        - $formkit: text
+          name: "ac_facebook_url"
+          label: "Facebook用户名"
+          value: ""
+        - $formkit: text
+          name: "ac_linkedin_url"
+          label: "linkedin用户名"
+          value: ""
+        - $formkit: text
+          name: "ac_twitter_url"
+          label: "Twitter用户名"
+          value: ""
+    - group: case
+      label: 备案设置
+      formSchema:
+        - $formkit: text
+          name: "ac_case_gxb"
+          help: "清空则不显示"
+          label: "工信部备案号"
+          value: ""
+        - $formkit: text
+          name: "ac_case_ga"
+          help: "清空则不显示"
+          label: "公安网备案号"
+          value: ""
+
+
+
+
+

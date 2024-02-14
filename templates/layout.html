@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:fragment="html(head,content,pager)"
+>
+<!-- head f s-->
+<head th:replace="_partial/head"></head>
+<!-- head f e-->
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i th:text="${theme.config.basic.ac_page_desc}"></i>
+</div>
+
+<div class="index-container">
+
+    <div class="index-left">
+        <!--nav f s-->
+        <div class="nav" id="nav" th:replace="_partial/nav::nav"></div>
+        <!--        <div class="search-field" id="search-field" th:replace="_partial/nav::search-field"></div>-->
+        <!--e-->
+        <div class="index-about-mobile">
+            <i></i>
+        </div>
+    </div>
+
+    <div class="index-middle">
+        <!-- Main Content s-->
+        <div th:replace="${content}"></div>
+        <!--        <div th:text="${pager}"></div>-->
+        <th:block th:if="${pager != null}">
+            <ul th:replace="${pager}">
+            </ul>
+        </th:block>
+        <!--e-->
+
+    </div>
+</div>
+
+<!--footer f s-->
+<footer th:replace="_partial/footer"></footer>
+<!--footer f e-->
+
+
+<script>
+    // We expose some of the variables needed by the front end
+    // window.hexo_search_path = ""
+    // window.hexo_root = "/"
+    // window.isPost = false
+</script>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script th:src="@{/assets/js/toc-gen.js}"></script>
+
+<script th:inline="javascript">
+    // 获取当前页面的相对路径
+    var currentPagePath = window.location.pathname;
+
+    // 获取id为nav-content的元素下所有的a标签
+    var navLinks = document.querySelectorAll('#nav-content a');
+
+    // 遍历所有的a标签
+    for (var i = 0; i < navLinks.length; i++) {
+        var link = navLinks[i];
+        var href = link.getAttribute('href');
+
+        // 如果href与当前页面的相对路径相同，则设置其父元素的class属性为active
+        if (href === currentPagePath) {
+            link.parentNode.classList.add('active');
+        }
+    }
+
+    var obj = /*[[${post.content.content}]]*/ '';
+    if (obj!=null){
+        var catalog = createCatalog(obj);
+        var toc = getCatalog(catalog);
+        replaceCatalog(toc);
+    }
+
+</script>
+<script th:src="@{/assets/js/index.js}"></script>
+<!--busuanzi js control s-->
+<!--<th:block th:if="${theme.config.count.ac_count_p==2}">-->
+<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!--</th:block>-->
+<!--busuanzi js control e-->
+
+</body>
+</html>
+</html>

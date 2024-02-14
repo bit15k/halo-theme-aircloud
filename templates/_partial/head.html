@@ -1,0 +1,18 @@
+<head xmlns:th="https://www.thymeleaf.org" th:fragment="head">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" th:content="${site.seo.description}">
+    <meta property="og:type" content="website">
+    <meta name="description" th:content="${site.seo.description}">
+    <meta name="keyword" th:content="${site.seo.keywords}">
+    <link rel="shortcut icon" th:href="${site.favicon}">
+    <title th:text="${site.title}"></title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" th:href="@{/assets/css/aircloud.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/gitment.css}">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>

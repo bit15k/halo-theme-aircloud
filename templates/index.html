@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+th:replace="~{layout :: html(head = null,content = ~{::content},pager = ~{::pager})}"
+        >
+<div class="post-preview-container" style="min-height: 720px" th:fragment="content">
+    <!--post list s-->
+    <div class="post-preview" th:each="post : ${posts.items}">
+
+        <div class="post-time" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></div>
+        <div class="post-info">
+            <a th:href="${post.status.permalink}">
+                <h3 th:text="${post.spec.title}"></h3>
+            </a>
+            <!--post tag s-->
+                <p th:if="${#lists.size(post.tags)>0}">
+                    <span>/</span>
+                    <span th:each="tag:${post.tags}">
+                        <a class="tag"  th:href="${tag.status.permalink}"  th:text="${tag.spec.displayName}+' /'"></a>
+                    </span>
+<!--                    <span>/</span>-->
+                </p>
+            <!--post tag e-->
+        </div>
+    </div>
+    <!--post list e-->
+
+</div>
+<!--pager s-->
+<ul class="pager" th:fragment="pager">
+    <th:block th:if="${posts.hasPrevious()}">
+        <li class="previous">
+            <a th:href="@{${posts.prevUrl}}">← 上一页</a>
+        </li>
+
+    </th:block>
+    <th:block th:if="${posts.hasNext()}">
+        <li class="next">
+            <a th:href="@{${posts.nextUrl}}">下一页 →</a>
+        </li>
+
+    </th:block>
+
+
+
+
+</ul>
+<!--pager e-->
+</html>
