@@ -25,11 +25,11 @@ spec:
           name: ac_avatar_circle
           label: 头像是否圆角
           help: ""
-          value: false
+          value: 0
           options:
-            - value: true
+            - value: 1
               label: 是
-            - value: false
+            - value: 0
               label: 否
         - $formkit: text
           name: ac_page_desc
@@ -48,12 +48,12 @@ spec:
           name: ac_dispaly_links
           label: 是否显示友链
           help: "菜单栏默认不显示友链,开启友链需要先安装链接管理插件,页面地址为/links"
-          value: false
+          value: 0
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
 #        - $formkit: singlePageSelect
 #          name: ac_links_url
 #          help: "从自建的独立页面选择一个作为友链页面"
@@ -62,27 +62,27 @@ spec:
         - $formkit: radio
           name: ac_dispaly_wall
           label: 是否显示留言板
-          help: "菜单栏默认不显示留言板"
-          value: false
+          help: "菜单栏默认不显示留言板,显示需指定一个自定义页面作为留言板"
+          value: 0
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
         - $formkit: singlePageSelect
           name: ac_wall_url
           help: "从自建的独立页面选择一个作为留言板页面"
           label: 指定留言页面
-          value: ""
+          value: "/"
         - $formkit: radio
           name: ac_dispaly_about
           label: 是否显示关于
-          value: false
-          help: "关于一般放网站介绍或个人介绍等信息,菜单栏默认不显示关于"
+          value: 0
+          help: "关于一般放网站介绍或个人介绍等信息,菜单栏默认不显示关于,开启需要指定一个自定义页面作为关于"
           options:
-            - value: true
+            - value: 1
               label: 是
-            - value: false
+            - value: 0
               label: 否
         - $formkit: singlePageSelect
           name: ac_about_url
@@ -91,44 +91,44 @@ spec:
           value: ""
         - $formkit: radio
           name: ac_dispaly_tag
-          value: true
+          value: 1
           label: 是否显示标签
           help: "菜单栏默认显示标签"
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
         - $formkit: radio
           name: ac_dispaly_category
           label: 是否显示分类
           help: "菜单栏默认不显示分类"
-          value: false
+          value: 0
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
         - $formkit: radio
           name: ac_dispaly_archive
           label: 是否显示归档
           help: "菜单栏默认显示归档"
-          value: false
+          value: 1
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
         - $formkit: radio
           name: ac_dispaly_search
           label: 是否显示搜索
-          value: true
-          help: "菜单栏默认显示搜索,但需安装搜索插件"
+          value: 1
+          help: "菜单栏默认显示搜索,但需安装搜索插件,否则不会显示"
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
 
 
     - group: count
@@ -137,12 +137,12 @@ spec:
         - $formkit: radio
           name: ac_display_count
           label: 是否启用页脚统计
-          value: true
-          help: "启用后下面的设置才有效"
+          value: 1
+          help: "启用后,下面的设置才有效"
           options:
-            - value: true
+            - value: 1
               label: 启用
-            - value: false
+            - value: 0
               label: 关闭
         - $formkit: radio
           name: ac_count_pv
@@ -159,8 +159,8 @@ spec:
         - $formkit: radio
           name: ac_count_uv
           label: 是否显示页脚访客量
-          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
-          value: 1
+          help: "默认关闭,halo自带只有访问量统计"
+          value: 0
           options:
 
             - value: 1
@@ -205,26 +205,39 @@ spec:
         - $formkit: radio
           name: ac_no_indent
           label: 是否启用文章首行缩进
-          help: "默认关闭"
-          value: false
+          help: "默认不启用"
+          value: 1
           options:
-            - value: true
-              label: 否
-            - value: false
-              label: 是
+            - value: 1
+              label: 不启用
+            - value: 0
+              label: 启用
+        - $formkit: radio
+          name: ac_index_post_tag
+          label: 首页文章列表是否显示分类和标签
+          help: "默认只显示所属标签"
+          value: 1
+          options:
+            - value: 1
+              label: 只显示所属标签
+            - value: 2
+              label: 只显示所属分类
+            - value: 0
+              label: 关闭
+
     - group: social
       label: 社交设置
       formSchema:
         - $formkit: radio
           name: ac_dispaly_social
           label: 是否显示页面底部社交图标
-          help: "默认开启,开启后下面配置才生效"
-          value: false
+          help: "默认关闭,开启后下面配置才生效"
+          value: 0
           options:
-            - value: true
-              label: 是
-            - value: false
-              label: 否
+            - value: 1
+              label: 显示
+            - value: 0
+              label: 不显示
         - $formkit: text
           label: "Gihub用户名"
           name: "ac_github_url"

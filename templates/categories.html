@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   xmlns:th="https://www.thymeleaf.org"
-  th:replace="~{layout :: html(head = null,content = ~{::categories-content},pager = null)}"
+  th:replace="~{layout :: html(title ='所有分类 - '+${site.title},content = ~{::archives},head = null,content = ~{::categories-content},pager = null)}"
 >
   <th:block th:fragment="categories-content">
     <div id='c_cloud' class="tags" >
@@ -11,7 +11,7 @@
         </th:block>
       </th:block>
       <th:block th:if="${#lists.size(categories)==0}">
-        <a href="/" class="tag-triangle" title="当前无标签"><i class="tag-i" text="当前无标签"></i></a>
+        <a href="/" class="tag-triangle" title="当前无分类"><i class="tag-i" text="当前无分类"></i></a>
       </th:block>
     </div>
   </th:block>

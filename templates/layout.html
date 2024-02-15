@@ -77,9 +77,16 @@
         }
     }
 
-    var obj = /*[[${post.content.content}]]*/ '';
-    if (obj!=null){
-        var catalog = createCatalog(obj);
+    var post_obj = /*[[${post.content.content}]]*/ '';
+
+    if (post_obj!=null){
+        var catalog = createCatalog(post_obj);
+        var toc = getCatalog(catalog);
+        replaceCatalog(toc);
+    }
+    var page_obj = /*[[${singlePage.content.content}]]*/ '';
+    if (page_obj!=null){
+        var catalog = createCatalog(page_obj);
         var toc = getCatalog(catalog);
         replaceCatalog(toc);
     }

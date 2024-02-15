@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::page},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title =${singlePage.spec.title}+' - '+${site.title},head = null,content = ~{::page},pager = null)}"
 >
 <div class="post-container" th:fragment="page">
   <div class="post-title" th:text="${singlePage.spec.title}"></div>

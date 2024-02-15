@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org"
-      th:replace="~{layout :: html(head = null,content = ~{::post-content},pager = null)}"
+      th:replace="~{layout :: html(head = null,title =${post.spec.title}+' - '+${site.title},content = ~{::post-content},pager = null)}"
 >
 <div class="post-container" th:fragment="post-content">
     <div class="post-title" th:text="${post.spec.title}"></div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span></span>
+        <span class="attr">发布于:<span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span> 更新于:<span th:text="${#dates.format(post.status.lastModifyTime, 'yyyy-MM-dd')}"></span></span>
         <!--post tag s    -->
-        <th:block th:if="${#lists.size(post.tags)>0}">
-        <span class="attr">标签：/
-            <th:block th:each="tag:${post.tags}">
-                <a class="tag" href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
+        <th:block th:if="${#lists.size(post.categories)>0}">
+        <span class="attr">分类: /
+            <th:block th:each="c:${post.categories}">
+                <a class="c" th:href="${c.status.permalink}" th:text="${c.spec.displayName}+' /'"></a>
             </th:block>
         <span></span>
         </span>
         </th:block>
+        <th:block th:if="${#lists.size(post.tags)>0}">
+        <span class="attr">标签: /
+            <th:block th:each="tag:${post.tags}">
+                <a class="tag" th:href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
+            </th:block>
+        <span></span>
+        </span>
+        </th:block>
+
         <!--post tag e    -->
         <span class="attr">访问：<span id="busuanzi_value_page_pv" th:text="${post.stats.visit}">352</span>
 </span>
 
     </div>
 
-    <div th:class="${theme.config.post.ac_no_indent}? 'post-content no-indent':'post-content'">
+    <div th:class="${theme.config.post.ac_no_indent==1}? 'post-content no-indent':'post-content'">
         <div th:utext="${post.content.content}"></div>
         <!--捐赠待做-->
         <br/>

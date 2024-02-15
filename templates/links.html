@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::links},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title ='友链展示 - '+${site.title},head = null,content = ~{::links},pager = null)}"
 >
 <div class="post-content no-indent" th:fragment="links">
 

@@ -1,9 +1,9 @@
 <footer class="footer" th:fragment="footer">
     <!-- social control s    -->
     <ul class="list-inline text-center">
-        <th:block th:if="${theme.config.social.ac_dispaly_social}">
+        <th:block th:if="${theme.config.social.ac_dispaly_social==1}">
             <ul class="list-inline text-center">
-                <th:block th:if="${theme.config.social.ac_twitter_url}">
+                <th:block th:if="${theme.config.social.ac_twitter_url!=''}">
                     <li>
                         <a target="_blank" th:href="'https://twitter.com/'+${theme.config.social.ac_twitter_url}">
                             <span class="fa-stack fa-lg">
@@ -12,7 +12,7 @@
                         </a>
                     </li>
                 </th:block>
-                <th:block th:if="${theme.config.social.ac_zhihu_url}">
+                <th:block th:if="${theme.config.social.ac_zhihu_url!=''}">
                     <li>
                         <a target="_blank"
                            th:href="'https://www.zhihu.com/people/'+${theme.config.social.ac_zhihu_url}">
@@ -22,7 +22,7 @@
                         </a>
                     </li>
                 </th:block>
-                <th:block th:if="${theme.config.social.ac_weibo_url}">
+                <th:block th:if="${theme.config.social.ac_weibo_url!=''}">
 
                     <li>
                         <a target="_blank" href="'http://weibo.com/'+${theme.config.social.ac_twitter_url}">
@@ -32,7 +32,7 @@
                         </a>
                     </li>
                 </th:block>
-                <th:block th:if="${theme.config.social.ac_facebook_url}">
+                <th:block th:if="${theme.config.social.ac_facebook_url!=''}">
 
                     <li>
                         <a target="_blank" href="'https://www.facebook.com/'+${theme.config.social.ac_facebook_url}">
@@ -42,7 +42,7 @@
                         </a>
                     </li>
                 </th:block>
-                <th:block th:if="${theme.config.social.ac_github_url}">
+                <th:block th:if="${theme.config.social.ac_github_url!=''}">
 
                     <li>
                         <a target="_blank" href="'https://github.com/'+${theme.config.social.ac_github_url}">
@@ -52,7 +52,7 @@
                         </a>
                     </li>
                 </th:block>
-                <th:block th:if="${theme.config.social.ac_linkedin_url}">
+                <th:block th:if="${theme.config.social.ac_linkedin_url!=''}">
 
                     <li>
                         <a target="_blank" href="'https://www.linkedin.com/in/'+${theme.config.social.ac_linkedin_url}">
@@ -80,7 +80,7 @@
     <!-- site friends links control e   -->
 
     <!--busuanzi js control s-->
-    <th:block th:if="${theme.config.count.ac_display_count}">
+    <th:block th:if="${theme.config.count.ac_display_count==1}">
         <p>
             <th:block th:with="stats = ${siteStatsFinder.getStats()}">
             <span th:if="${theme.config.count.ac_count_pv==1}">
@@ -103,17 +103,17 @@
     </th:block>
 
     <!-- beian   -->
-    <p th:if="${theme.config.case.ac_case_gxb}!=''">
+    <p th:if="${theme.config.case.ac_case_gxb}!='' or ${theme.config.case.ac_case_ga}!='' ">
 
 
     <span><a href="beian.miit.gov.cn" th:text="${theme.config.case.ac_case_gxb}"></a></span>
-    <span><a href="https://beian.mps.gov.cn/#/query/webSearch" th:text="' / '+${theme.config.case.ac_case_ga}"></a></span>
+    <span><a href="https://beian.mps.gov.cn/#/query/webSearch" th:text="'  '+${theme.config.case.ac_case_ga}"></a></span>
 
 
     </p>
     <!-- copyright info   -->
-    <p>©<span th:text="${theme.config.basic.ac_copyright}">2018-2024</span>.<span> All Rights Reserved <span th:text="${theme.config.basic.ac_name}">bit15k</span> </span>Created By <a target="_blank" rel="noopener" href="https://halo.run/">Halo</a> Theme <a target="_blank"
-                                                                                               rel="noopener" href="">AirCloud</a>
+    <p>©<span th:text="${theme.config.basic.ac_copyright}">2018-2024</span>.<span> All Rights Reserved <span th:text="${theme.config.basic.ac_name}"><a href="/">bit15k</a></span> </span>Created By <a target="_blank" rel="noopener" href="https://halo.run/">Halo</a> Theme <a target="_blank"
+                                                                                               rel="noopener" href="https://bytevoyage.site">AirCloud</a>
     </p>
 </footer>
 

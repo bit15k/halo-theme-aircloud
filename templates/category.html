@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::category-posts},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title =${category.spec.displayName}+' - '+${site.title},content = ~{::archives},head = null,content = ~{::category-posts},pager = null)}"
 >
 <!-- 标签列表 -->
 <div class="one-tag-list" th:fragment="category-posts">

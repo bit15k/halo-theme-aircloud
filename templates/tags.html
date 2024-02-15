@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(head = null,content = ~{::tags-content},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title ='所有标签 - '+${site.title},head = null,content = ~{::tags-content},pager = null)}"
 >
 <div id='tag_cloud' class="tags" th:fragment="tags-content">
   <th:block th:if="${#lists.size(tags)>0}">

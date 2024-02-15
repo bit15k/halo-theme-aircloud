@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org"
-      th:replace="~{layout :: html(head = null,content = ~{::archives},pager = ~{::pager-archives})}"
+      th:replace="~{layout :: html(head = null,title ='归档 - '+${site.title},content = ~{::archives},pager = ~{::pager-archives})}"
 >
 <div class="archives-container" th:fragment="archives">
     <th:block th:each="archive : ${archives.items}">

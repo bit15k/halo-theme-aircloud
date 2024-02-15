@@ -1,6 +1,6 @@
 <div class="nav" id="nav" th:fragment="nav">
     <div class="avatar-name">
-        <div th:class="${theme.config.basic.ac_avatar_circle} ? 'avatar radius':'avatar' ">
+        <div th:class="${theme.config.basic.ac_avatar_circle==1} ? 'avatar radius':'avatar' ">
             <!--nav logo s-->
             <img th:src="${theme.config.basic.ac_avatar?:'@{/assets/imgs/avatar.jpg}'}"/>
             <!--nav logo e-->
@@ -20,7 +20,7 @@
                     <span>首页</span>
                 </a>
             </li>
-            <th:block th:if="${theme.config.menu.ac_dispaly_category}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_category==1}">
                 <li>
                     <a href="/categories">
                         <i class="iconfont icon-shoucang1"></i>
@@ -28,7 +28,7 @@
                     </a>
                 </li>
             </th:block>
-            <th:block th:if="${theme.config.menu.ac_dispaly_tag}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_tag==1}">
             <li>
                 <a href="/tags">
                     <i class="iconfont icon-shoucang1"></i>
@@ -36,7 +36,7 @@
                 </a>
             </li>
             </th:block>
-            <th:block th:if="${theme.config.menu.ac_dispaly_archive}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_archive==1}">
             <li>
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
@@ -44,7 +44,7 @@
                 </a>
             </li>
             </th:block>
-            <th:block th:if="${theme.config.menu.ac_dispaly_links}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_links==1}">
 
             <li>
                 <a href="/links">
@@ -56,7 +56,7 @@
 <!--            <p th:text="${theme.config.menu.ac_dispaly_tag}"></p>-->
 <!--            <p th:text="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}"></p>-->
 
-            <th:block th:if="${theme.config.menu.ac_dispaly_wall}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_wall==1}">
 
             <li>
                 <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}">
@@ -65,7 +65,7 @@
                 </a>
             </li>
             </th:block>
-            <th:block th:if="${theme.config.menu.ac_dispaly_about}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_about==1}">
 
             <li>
                 <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_about_url).status.permalink}">
@@ -75,12 +75,15 @@
             </li>
             </th:block>
             <!-- halo search  -->
-            <li th:if="${pluginFinder.available('PluginSearchWidget')}">
-                <a id="search" href="javascript:SearchWidget.open()">
-                    <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
-                </a>
-            </li>
+            <th:block th:if="${pluginFinder.available('PluginSearchWidget')}">
+                <li th:if="${theme.config.menu.ac_dispaly_search==1}">
+                    <a id="search" href="javascript:SearchWidget.open()">
+                        <i class="iconfont icon-sousuo1"></i>
+                        <span>搜索</span>
+                    </a>
+                </li>
+            </th:block>
+
 
 
         </ul>
