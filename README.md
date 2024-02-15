@@ -1,18 +1,18 @@
 
 <div align="center">
-<a href="https://bytevoyage.site/archives">
+<a href="https://bytevoyage.site/archives" target="_blank">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/avatar.jpg">
 </a>
-<h1 align="center"> Halo Theme AirCloud  </h1>
+<h1 align="center"> <a href="https://bytevoyage.site" target="_blank">Halo Theme AirCloud</a></h1>
 <p align="center"> 
-<a href="https://halo.run"><img src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-aircloud%2Fmain%2Ftheme.yaml&query=%24.spec.require&style=plastic&label=halo&labelColor=blue&color=brown"/></a>
-<a href="https://bytevoyage.site"><img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud?include_prereleases&display_name=release&style=plastic&color=blue"/></a>
-<a href="hhttps://bytevoyage.site"><img alt="size" src="https://img.shields.io/github/languages/code-size/bit15k/halo-theme-aircloud?&style=plastic"/></a>
-<a href="https://bytevoyage.site"><img alt="commits" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-aircloud?&style=plastic"/></a>
+<a href="https://halo.run" target="_blank"><img src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-aircloud%2Fmain%2Ftheme.yaml&query=%24.spec.require&style=plastic&label=halo&labelColor=blue&color=brown"/></a>
+<a href="https://bytevoyage.site" target="_blank"><img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud?include_prereleases&display_name=release&style=plastic&color=blue"/></a>
+<a href="https://bytevoyage.site" target="_blank"><img alt="size" src="https://img.shields.io/github/languages/code-size/bit15k/halo-theme-aircloud?&style=plastic"/></a>
+<a href="https://bytevoyage.site" target="_blank"><img alt="commits" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-aircloud?&style=plastic"/></a>
 <a href="https://halo.run" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange?&style=plastic" alt="License"/></a>
 </p>
 <p align="center">
-<img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg"/>
+<a href="https://bytevoyage.site" target="_blank"><img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg"/></a>
 </p>
 <p align="center">
 
