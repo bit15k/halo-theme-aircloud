@@ -11,6 +11,9 @@
   <a href="https://github.com/bit15k/halo-theme-aircloud/releases" target="_blank">
     <img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud" alt="Release"/>
   </a>
+<a href="https://github.com/nineya/halo-theme-dream2.0/releases"><img alt="size" src="https://img.shields.io/github/languages/code-size/bit15k/halo-theme-aircloud?style=flat-square"/></a>
+<a href="https://github.com/nineya/halo-theme-dream2.0/commits"><img alt="commits" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-aircloud?style=flat-square"/></a>
+
   <a href="https://halo.run" target="_blank">
     <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange" alt="License"/>
   </a>
