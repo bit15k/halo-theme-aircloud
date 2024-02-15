@@ -6,8 +6,7 @@
     <img src="https://img.shields.io/badge/dynamic/yaml?label=Halo&query=%24.spec.require&url=https://raw.githubusercontent.com/bit15k/halo-theme-aircloud/main/theme.yaml&color=113,195,71" alt="Halo"/>
   </a>
   <a href="https://github.com/bit15k/halo-theme-aircloud/releases" target="_blank">
-    <img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud
-" alt="Release"/>
+    <img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud" alt="Release"/>
   </a>
   <a href="https://halo.run" target="_blank">
     <img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange" alt="License"/>
@@ -56,7 +55,7 @@
 
 1.[下载地址](https://github.com/bit15k/halo-theme-aircloud/releases) , 下载zip安装包后,通过Halo后台主题管理上传.  
 
-2.直接拉取主分支代码  
+ 
 
 ## 使用说明
 

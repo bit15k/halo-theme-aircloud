@@ -73,7 +73,7 @@ spec:
           name: ac_wall_url
           help: "从自建的独立页面选择一个作为留言板页面"
           label: 指定留言页面
-          value: "/"
+          value: ""
         - $formkit: radio
           name: ac_dispaly_about
           label: 是否显示关于
@@ -170,7 +170,7 @@ spec:
         - $formkit: radio
           name: ac_count_post
           label: 是否显示页脚文章数
-          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          help: ""
           value: 1
           options:
 
@@ -181,7 +181,7 @@ spec:
         - $formkit: radio
           name: ac_count_category
           label: 是否显示页脚分类数
-          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          help: ""
           value: 1
           options:
             - value: 1
@@ -191,7 +191,7 @@ spec:
         - $formkit: radio
           name: ac_count_comment
           label: 是否显示页脚评论数量
-          help: "默认使用busuanzi访客量统计,halo自带只有访问量统计"
+          help: ""
           value: 1
           options:
 

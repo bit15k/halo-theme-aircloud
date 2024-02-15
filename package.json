@@ -17,11 +17,9 @@
   },
   "homepage": "https://github.com/halo-dev/theme-starter#readme",
   "dependencies": {
-    "@firstandthird/toc": "^2.1.0",
-    "hexo-util": "^3.2.0",
-    "import": "^0.0.6"
+
   },
   "devDependencies": {
-    "typescript": "^5.3.3"
+
   }
 }

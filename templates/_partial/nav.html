@@ -2,7 +2,13 @@
     <div class="avatar-name">
         <div th:class="${theme.config.basic.ac_avatar_circle==1} ? 'avatar radius':'avatar' ">
             <!--nav logo s-->
-            <img th:src="${theme.config.basic.ac_avatar?:'@{/assets/imgs/avatar.jpg}'}"/>
+            <th:block th:if="${theme.config.basic.ac_avatar}==''">
+                <img th:src="@{/assets/imgs/avatar.jpg}"/>
+            </th:block>
+            <th:block th:if="${theme.config.basic.ac_avatar}!=''">
+                <img th:src="${theme.config.basic.ac_avatar}"/>
+            </th:block>
+
             <!--nav logo e-->
         </div>
         <div class="name">
@@ -23,7 +29,7 @@
             <th:block th:if="${theme.config.menu.ac_dispaly_category==1}">
                 <li>
                     <a href="/categories">
-                        <i class="iconfont icon-shoucang1"></i>
+                        <i class="iconfont icon-guidang"></i>
                         <span>分类</span>
                     </a>
                 </li>
@@ -31,7 +37,7 @@
             <th:block th:if="${theme.config.menu.ac_dispaly_tag==1}">
             <li>
                 <a href="/tags">
-                    <i class="iconfont icon-shoucang1"></i>
+                    <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
                 </a>
             </li>
@@ -56,20 +62,20 @@
 <!--            <p th:text="${theme.config.menu.ac_dispaly_tag}"></p>-->
 <!--            <p th:text="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}"></p>-->
 
-            <th:block th:if="${theme.config.menu.ac_dispaly_wall==1}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_wall==1} and ${theme.config.menu.ac_wall_url}!=''">
 
             <li>
                 <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_wall_url).status.permalink}">
-                    <i class="iconfont icon-shoucang1"></i>
+                    <i class="iconfont icon-biaoqian2"></i>
                     <span>留言</span>
                 </a>
             </li>
             </th:block>
-            <th:block th:if="${theme.config.menu.ac_dispaly_about==1}">
+            <th:block th:if="${theme.config.menu.ac_dispaly_about==1} and ${theme.config.menu.ac_about_url}!=''">
 
             <li>
                 <a th:href="${singlePageFinder.getByName(theme.config.menu.ac_about_url).status.permalink}">
-                    <i class="iconfont icon-guanyu2"></i>
+                    <i class="iconfont icon-guanyu1"></i>
                     <span>关于</span>
                 </a>
             </li>

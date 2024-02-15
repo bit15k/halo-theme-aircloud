@@ -25,7 +25,7 @@
                 <th:block th:if="${theme.config.social.ac_weibo_url!=''}">
 
                     <li>
-                        <a target="_blank" href="'http://weibo.com/'+${theme.config.social.ac_twitter_url}">
+                        <a target="_blank" th:href="'http://weibo.com/'+${theme.config.social.ac_weibo_url}">
                             <span class="fa-stack fa-lg">
                                   <i class="iconfont icon-weibo"></i>
                             </span>
@@ -35,7 +35,7 @@
                 <th:block th:if="${theme.config.social.ac_facebook_url!=''}">
 
                     <li>
-                        <a target="_blank" href="'https://www.facebook.com/'+${theme.config.social.ac_facebook_url}">
+                        <a target="_blank" th:href="'https://www.facebook.com/'+${theme.config.social.ac_facebook_url}">
                             <span class="fa-stack fa-lg">
                                 <i class="iconfont icon-facebook"></i>
                             </span>
@@ -45,7 +45,7 @@
                 <th:block th:if="${theme.config.social.ac_github_url!=''}">
 
                     <li>
-                        <a target="_blank" href="'https://github.com/'+${theme.config.social.ac_github_url}">
+                        <a target="_blank" th:href="'https://github.com/'+${theme.config.social.ac_github_url}">
                             <span class="fa-stack fa-lg">
                                 <i class="iconfont icon-github"></i>
                             </span>
@@ -55,7 +55,7 @@
                 <th:block th:if="${theme.config.social.ac_linkedin_url!=''}">
 
                     <li>
-                        <a target="_blank" href="'https://www.linkedin.com/in/'+${theme.config.social.ac_linkedin_url}">
+                        <a target="_blank" th:href="'https://www.linkedin.com/in/'+${theme.config.social.ac_linkedin_url}">
                             <span class="fa-stack fa-lg">
                                 <i class="iconfont icon-linkedin"></i>
                             </span>

@@ -1,14 +1,14 @@
 apiVersion: theme.halo.run/v1alpha1
 kind: Theme
 metadata:
-  name: theme-starter
+  name: theme-AirCloud
 spec:
   displayName: AirCloud
   author:
-    name: halo-dev
-    website: "https://halo.run"
+    name: bit15k
+    website: "https://bytevoyage.site"
   description: AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心放在博文本身.
-  logo: "https://halo.run/logo"
+  logo: "https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud@0.9.1/templates/assets/imgs/avatar.jpg"
   website: "https://bytevoyage.site"
   repo: "https://github.com/bit15k/halo-theme-aircloud"
   settingName: "AirCloud-setting"
