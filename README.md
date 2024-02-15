@@ -1,6 +1,6 @@
 
 <div align="center">
-<img width="100px" src="https://bytevoyage.site/upload/aircloud-avatar.jpg">
+<img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/avatar.jpg">
 <h1 align="center"> Halo Theme AirCloud  </h1>
 <p align="center"> 
 <a href="https://halo.run" target="_blank">
@@ -14,7 +14,7 @@
   </a>
 </p>
 <p align="center">
-<img width="50%" src="https://bytevoyage.site/upload/air-cloud-theme.png">
+<img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg">
 </p>
 <p align="center">
 
