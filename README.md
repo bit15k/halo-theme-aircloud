@@ -1,6 +1,8 @@
 
 <div align="center">
+<a href="https://bytevoyage.site/archives">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/avatar.jpg">
+</a>
 <h1 align="center"> Halo Theme AirCloud  </h1>
 <p align="center"> 
 <a href="https://halo.run" target="_blank">
@@ -14,11 +16,11 @@
   </a>
 </p>
 <p align="center">
-<img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg">
+<img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg"/>
 </p>
 <p align="center">
 
-[主题预览](https://bytevoyage.site) | [快速上手](#-快速安装) | [使用文档](https://bytevoyage.site) 
+[主题预览](https://bytevoyage.site) | [快速上手](https://bytevoyage.site/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://bytevoyage.site/archives/AirCloud) 
 
 </p>
 </div>
@@ -87,7 +89,7 @@
 
 ## 使用说明
 
-> 详细使用说明参考
+> 详细使用说明参考 https://bytevoyage.site/archives/AirCloud
 
 ## 问题联系
 
