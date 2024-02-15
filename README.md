@@ -18,11 +18,15 @@
 </p>
 <p align="center">
 
-[主题预览](#-预览) | [快速上手](#-安装) | [使用文档](https://bytevoyage.site) 
+[主题预览](https://bytevoyage.site) | [快速上手](#-快速安装) | [使用文档](https://bytevoyage.site) 
 
 </p>
 </div>
 
+## 主题预览
+|    站点名称    |          站点地址           |
+|:----------:|:-----------------------:|
+| ByteVoyage | https://bytevoyage.site  |
 
 ## 主题介绍
 
