@@ -32,7 +32,7 @@
 
 以下引用 <a href="https://github.com/aircloud/hexo-theme-aircloud">原作者</a> 对主题的说明  
 
-**Hexo-Theme-AirCloud 是一个简洁轻量的 hexo 博客主题,旨在将中心放在博文本身.**  
+**Halo-Theme-AirCloud 是一个简洁轻量的 Halo 博客主题,旨在将中心放在博文本身.**  
 
 因此, 默认没有大范围的主题色块, 图片铺排等, 也不要求每片博文配图, 一方面这并不是我们记录知识的重点, 另外一方面可能程序员群体并没有足够的素材, 容易造成主题纠纷.  
 
