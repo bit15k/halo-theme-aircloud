@@ -40,7 +40,7 @@
 ## 快速安装
 ### 本地安装
 
-1. 在 [ Release](https://github.com/bit15k/halo-theme-aircloud/releases) 页面 `下载` 最新主题包 (zip)
+1. [点击此处下载](https://disk.bytevoyage.site/s/KbUQ?path=%2F) 或在 [ Release](https://github.com/bit15k/halo-theme-aircloud/releases) 页面 `下载` 最新主题包 (zip)
 2. 进入 Halo 后台 -> 主题 (左侧面板)
 3. 点击右上角 “主题”， 在弹出的窗口中选择 `安装主题`
 4. 选择下载好的主题包（zip）
