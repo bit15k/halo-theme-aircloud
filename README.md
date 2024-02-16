@@ -50,7 +50,7 @@
 
 ### 远程安装
 
-1. 复制地址 `https://github.com/bit15k/halo-theme-aircloud`
+1. 复制地址 `https://github.com/bit15k/halo-theme-aircloud/archive/refs/heads/main.zip`
 2. 进入Halo后台 -> 外观 -> 主题 (左侧面板)
 3. 点击右上方 `安装` 按钮, 然后选择 `远程下载`
 4. 在文本框中粘贴仓库地址后点击下载
