@@ -24,10 +24,17 @@
         <span></span>
         </span>
         </th:block>
-
         <!--post tag e    -->
-        <span class="attr">访问：<span id="busuanzi_value_page_pv" th:text="${post.stats.visit}">352</span>
-</span>
+        <th:block th:if="${theme.config.count.ac_count_pv!=0}">
+        <span class="attr">访问：
+            <th:block th:if="${theme.config.count.ac_count_pv==2}">
+            <span id="busuanzi_value_page_pv" th:text="${post.stats.visit}"></span>
+            </th:block>
+            <th:block th:if="${theme.config.count.ac_count_pv==1}">
+            <span th:text="${post.stats.visit}">352</span>
+            </th:block>
+        </span>
+        </th:block>
 
     </div>
 
