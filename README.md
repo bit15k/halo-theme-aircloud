@@ -37,7 +37,18 @@
 因此, 默认没有大范围的主题色块, 图片铺排等, 也不要求每片博文配图, 一方面这并不是我们记录知识的重点, 另外一方面可能程序员群体并没有足够的素材, 容易造成主题纠纷.  
 
 通过不冗余的内容进行传达, 比如默认没有博文摘要,因为不少开发者写博客的时候没有写博文摘要, 如果从博客前一部分截取往往不能表达完整思想.
+
 ## 快速安装
+
+> 安装完毕后,尽量手动保存一遍主题配置,防止出现未知错误
+
+### 应用市场安装
+
+**推荐使用, 后续可收到更新**  
+
+1. Halo 安装[应用市场](https://www.halo.run/store/apps/app-VYJbF)插件( **Halo>=2.10.0 已内置无需安装** )
+2. 直接在应用市场中搜索 AirCloud 安装
+
 ### 本地安装
 
 1. [点击此处下载](https://disk.bytevoyage.site/s/KbUQ?path=%2F) 或在 [ Release](https://github.com/bit15k/halo-theme-aircloud/releases) 页面 `下载` 最新主题包 (zip)
@@ -46,14 +57,24 @@
 4. 选择下载好的主题包（zip）
 5. 安装完成后的主题将会出现在 “未安装” 内，点击 `启用主题`
 
-> 安装完毕后,尽量手动保存一遍主题配置,防止出现未知错误
+
 
 ### 远程安装
+
+方式一  
+
+Halo 应用市场网页直接进行远程安装：https://www.halo.run/store/apps/app-ZUaYf  
+( 适用于 Halo>=2.6.0 且有外网访问地址)  
+
+方法二    
 
 1. 复制地址 `https://github.com/bit15k/halo-theme-aircloud/archive/refs/heads/main.zip`
 2. 进入Halo后台 -> 外观 -> 主题 (左侧面板)
 3. 点击右上方 `安装` 按钮, 然后选择 `远程下载`
 4. 在文本框中粘贴仓库地址后点击下载
+
+
+
 ### 插件依赖
 > 所有插件均为可选，不安装则不会出现对应功能。
 > 部分插件可能已经预设在 Halo 内。
@@ -64,6 +85,7 @@
 - 友链页面 [plugin-links](https://github.com/halo-sigs/plugin-links)
 - 代码高亮 [plugin-highlightjs](https://github.com/halo-sigs/plugin-highlightjs)
 > 更多插件请参见：https://github.com/halo-sigs/awesome-halo
+
 ## 主题功能
 
 - 支持自定义头像
