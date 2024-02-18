@@ -63,7 +63,8 @@
 
 方式一  
 
-Halo 应用市场网页直接进行远程安装：https://www.halo.run/store/apps/app-ZUaYf ( 适用于 Halo>=2.6.0 且有外网访问地址)  
+Halo 应用市场网页直接进行远程安装：https://www.halo.run/store/apps/app-ZUaYf  
+( 适用于 Halo>=2.6.0 且有外网访问地址)  
 
 方法二    
 
