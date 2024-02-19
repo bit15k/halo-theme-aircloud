@@ -1340,3 +1340,5 @@ pre .javascript .function {
 .gitment-comment p {
   text-indent: 0;
 }
+.backToTop{display:none;width:18px;line-height:1.2;padding:5px 0;background-color:#000;color:#fff;font-size:12px;text-align:center;position:fixed;right:10px;bottom:100px;cursor:pointer;opacity:.6;filter:Alpha(opacity=60);z-index:999}
+
