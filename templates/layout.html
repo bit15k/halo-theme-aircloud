@@ -57,7 +57,7 @@
 </script>
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script th:src="@{/assets/js/toc-gen.js}"></script>
+<script th:src="@{/assets/js/toc-gen.js?v={version}(version=${theme.spec.version})}"></script>
 
 <script th:inline="javascript">
     // 获取当前页面的相对路径
@@ -92,7 +92,7 @@
     }
 
 </script>
-<script th:src="@{/assets/js/index.js}"></script>
+<script th:src="@{/assets/js/index.js?v={version}(version=${theme.spec.version})}"></script>
 <!--busuanzi js control s-->
 <!--<th:block th:if="${theme.config.count.ac_count_p==2}">-->
 <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
