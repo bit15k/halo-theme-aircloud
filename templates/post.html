@@ -6,7 +6,9 @@
     <div class="post-title" th:text="${post.spec.title}"></div>
 
     <div class="post-meta">
-        <span class="attr">发布于:<span th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span> 更新于:<span th:text="${#dates.format(post.status.lastModifyTime, 'yyyy-MM-dd')}"></span></span>
+        <span class="attr">发布于:<span
+                th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></span> 更新于:<span
+                th:text="${#dates.format(post.status.lastModifyTime, 'yyyy-MM-dd')}"></span></span>
         <!--post tag s    -->
         <th:block th:if="${#lists.size(post.categories)>0}">
         <span class="attr">分类: /
@@ -21,12 +23,11 @@
             <th:block th:each="tag:${post.tags}">
                 <a class="tag" th:href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
             </th:block>
-        <span></span>
         </span>
         </th:block>
         <!--post tag e    -->
         <th:block th:if="${theme.config.count.ac_count_pv!=0}">
-        <span class="attr">访问：
+        <span class="attr">访问:
             <th:block th:if="${theme.config.count.ac_count_pv==2}">
             <span id="busuanzi_value_page_pv" th:text="${post.stats.visit}"></span>
             </th:block>
@@ -35,7 +36,11 @@
             </th:block>
         </span>
         </th:block>
-
+        <th:block th:if="${theme.config.post.ac_author==1}">
+        <span class="attr">作者:
+            <span th:text="${post.owner.displayName}"></span>
+        </span>
+        </th:block>
     </div>
 
     <div th:class="${theme.config.post.ac_no_indent==1}? 'post-content no-indent':'post-content'">
@@ -44,23 +49,47 @@
         <br/>
         <!-- default comment halo comment s     -->
         <div id="comment-container">
+            <!-- control comment type           -->
+            <th:block th:if="${theme.config.comment.comment_list[0].comment_enabled == 1 }">
+                <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 1}">
+                    <th:block th:if="${haloCommentEnabled}">
+                        <th:block th:if="${post.spec.allowComment}">
+                            <halo:comment
+                                    group="content.halo.run"
+                                    kind="Post"
+                                    th:attr="name=${post.metadata.name}"
+                                    colorScheme="'light'"
+                            />
+                        </th:block>
+                    </th:block>
+                </th:block>
+                <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 2}">
+                    <div class="giscus"></div>
+                    <script src="https://giscus.app/client.js"
+                            data-repo="bit15k/giscus-test"
+                            data-repo-id="R_kgDOLVH4Zw"
+                            data-category="[在此输入分类名]"
+                            data-category-id="[在此输入分类 ID]"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="bottom"
+                            data-theme="preferred_color_scheme"
+                            data-lang="zh-CN"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                    <th:block th:utext="${theme.config.comment.comment_list[0].comment_giscus_code}"></th:block>
 
-            <th:block th:if="${haloCommentEnabled}">
-                <th:block th:if="${post.spec.allowComment}">
-                    <halo:comment
-                            group="content.halo.run"
-                            kind="Post"
-                            th:attr="name=${post.metadata.name}"
-                            colorScheme="'light'"
-                    />
-                <th:block th:if="${haloCommentEnabled}">
+                </th:block>
             </th:block>
 
         </div>
         <!-- default comment halo comment e  -->
         <div id="disqus_thread"></div>
         <div id="lv-container"></div>
-        <div class="giscus"></div>
+
     </div>
 
 
