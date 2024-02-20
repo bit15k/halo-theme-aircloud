@@ -9,8 +9,8 @@
     <link rel="shortcut icon" th:href="${site.favicon}">
     <title th:text="${title}"></title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/aircloud.css}">
-    <link rel="stylesheet" th:href="@{/assets/css/gitment.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/aircloud.css?v={version}(version=${theme.spec.version})}">
+    <link rel="stylesheet" th:href="@{/assets/css/gitment.css?v={version}(version=${theme.spec.version})}">
     <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
     <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
     <!-- ga & ba script hoook -->
