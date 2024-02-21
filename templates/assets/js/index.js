@@ -321,9 +321,9 @@ if(!toc || !toc.children || !toc.children[0]){
                 minTopsValue = item
             }
 
-            console.log(minTopsValue, minTop)
+            // console.log(minTopsValue, minTop)
         }
-        console.log(minTopsValue+"-")
+        // console.log(minTopsValue+"-")
         if (minTopsValue) {
             // console.log("-----")
             for (let item of result) {
@@ -417,7 +417,7 @@ function getCatalog() {
 }
 function replaceCatalog(newIndex) {
     var tocElement = document.getElementById("toc"); // 获取要替换的目标元素
-    console.log(tocElement.classList); // 查看元素的类名列表
+    // console.log(tocElement.classList); // 查看元素的类名列表
 
     if (tocElement) {
         tocElement.outerHTML = newIndex; // 替换目标元素的内容
