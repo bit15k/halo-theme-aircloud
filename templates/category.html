@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title =${category.spec.displayName}+' - '+${site.title},content = ~{::archives},head = null,content = ~{::category-posts},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{layout :: html(title =${category.spec.displayName}+' - '+${site.title},content = ~{::archives},head = null,content = ~{::category-posts},pager = null)}"
 >
 <!-- 标签列表 -->
 <div class="one-tag-list" th:fragment="category-posts">
@@ -7,22 +8,22 @@
                     <span class="tag-text" th:text="${category.spec.displayName}"></span>
                 </span>
 
-  <!-- <li class="listing-item">
-  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li> -->
-  <th:block th:each="post : ${posts.items}">
-    <div class="post-preview">
-      <a th:href="${post.status.permalink}">
-        <h2 class="post-title" th:text="${post.spec.title}">
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <th:block th:each="post : ${posts.items}">
+        <div class="post-preview">
+            <a th:href="${post.status.permalink}">
+                <h2 class="post-title" th:text="${post.spec.title}">
 
-        </h2>
+                </h2>
 
-      </a>
-      <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </div>
 
-  </th:block>
+    </th:block>
 
 </div>
 </html>

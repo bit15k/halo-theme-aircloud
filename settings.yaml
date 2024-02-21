@@ -242,7 +242,7 @@ spec:
           name: comment_list
           label: 是否开启评论
           help: ""
-          value: []
+          value: [{"comment_enabled":1,"comment_type":1}]
           max: 5
           min: 1
           addButton: false

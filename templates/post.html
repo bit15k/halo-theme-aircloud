@@ -65,21 +65,7 @@
                 </th:block>
                 <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 2}">
                     <div class="giscus"></div>
-                    <script src="https://giscus.app/client.js"
-                            data-repo="bit15k/giscus-test"
-                            data-repo-id="R_kgDOLVH4Zw"
-                            data-category="[在此输入分类名]"
-                            data-category-id="[在此输入分类 ID]"
-                            data-mapping="pathname"
-                            data-strict="0"
-                            data-reactions-enabled="1"
-                            data-emit-metadata="0"
-                            data-input-position="bottom"
-                            data-theme="preferred_color_scheme"
-                            data-lang="zh-CN"
-                            crossorigin="anonymous"
-                            async>
-                    </script>
+
                     <th:block th:utext="${theme.config.comment.comment_list[0].comment_giscus_code}"></th:block>
 
                 </th:block>

@@ -1,64 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title =${singlePage.spec.title}+' - '+${site.title},head = null,content = ~{::page},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{layout :: html(title =${singlePage.spec.title}+' - '+${site.title},head = null,content = ~{::page},pager = null)}"
 >
 <div class="post-container" th:fragment="page">
-  <div class="post-title" th:text="${singlePage.spec.title}"></div>
+    <div class="post-title" th:text="${singlePage.spec.title}"></div>
 
-  <div class="post-meta">
-    <span class="attr">发布于：<span th:text="${#dates.format(singlePage.spec.publishTime, 'yyyy-MM-dd')}"></span></span>
+    <div class="post-meta">
+        <span class="attr">发布于：<span
+                th:text="${#dates.format(singlePage.spec.publishTime, 'yyyy-MM-dd')}"></span></span>
 
 
-    <span class="attr">访问：<span id="busuanzi_value_page_pv" th:text="${singlePage.stats.visit}"></span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv" th:text="${singlePage.stats.visit}"></span>
 </span>
 
-  </div>
-  <!--样式待做  -->
-  <div class="post-content no-indent">
-    <div th:utext="${singlePage.content.content}"></div>
-    <!--捐赠待做-->
-    <br />
-    <div id="comment-container">
-      <!-- default comment halo comment s     -->
-      <th:block th:if="${theme.config.comment.comment_list[0].comment_enabled == 1 }">
-        <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 1}">
-          <th:block th:if="${haloCommentEnabled}">
-            <th:block th:if="${post.spec.allowComment}">
-              <halo:comment
-                      group="content.halo.run"
-                      kind="Post"
-                      th:attr="name=${post.metadata.name}"
-                      colorScheme="'light'"
-              />
-            </th:block>
-          </th:block>
-        </th:block>
-        <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 2}">
-          <div class="giscus"></div>
-          <script src="https://giscus.app/client.js"
-                  data-repo="bit15k/giscus-test"
-                  data-repo-id="R_kgDOLVH4Zw"
-                  data-category="[在此输入分类名]"
-                  data-category-id="[在此输入分类 ID]"
-                  data-mapping="pathname"
-                  data-strict="0"
-                  data-reactions-enabled="1"
-                  data-emit-metadata="0"
-                  data-input-position="bottom"
-                  data-theme="preferred_color_scheme"
-                  data-lang="zh-CN"
-                  crossorigin="anonymous"
-                  async>
-          </script>
-          <th:block th:utext="${theme.config.comment.comment_list[0].comment_giscus_code}"></th:block>
-
-        </th:block>
-      </th:block>
-
     </div>
-    <div id="disqus_thread"></div>
-    <div id="lv-container"></div>
-    <div class="giscus"></div>
-  </div>
+    <!--样式待做  -->
+    <div class="post-content no-indent">
+        <div th:utext="${singlePage.content.content}"></div>
+        <!--捐赠待做-->
+        <br/>
+        <div id="comment-container">
+            <!-- default comment halo comment s     -->
+            <th:block th:if="${theme.config.comment.comment_list[0].comment_enabled == 1 }">
+                <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 1}">
+                    <th:block th:if="${haloCommentEnabled}">
+                        <th:block th:if="${post.spec.allowComment}">
+                            <halo:comment
+                                    group="content.halo.run"
+                                    kind="Post"
+                                    th:attr="name=${post.metadata.name}"
+                                    colorScheme="'light'"
+                            />
+                        </th:block>
+                    </th:block>
+                </th:block>
+                <th:block th:if="${theme.config.comment.comment_list[0].comment_type == 2}">
+                    <div class="giscus"></div>
+                    <script src="https://giscus.app/client.js"
+                            data-repo="bit15k/giscus-test"
+                            data-repo-id="R_kgDOLVH4Zw"
+                            data-category="[在此输入分类名]"
+                            data-category-id="[在此输入分类 ID]"
+                            data-mapping="pathname"
+                            data-strict="0"
+                            data-reactions-enabled="1"
+                            data-emit-metadata="0"
+                            data-input-position="bottom"
+                            data-theme="preferred_color_scheme"
+                            data-lang="zh-CN"
+                            crossorigin="anonymous"
+                            async>
+                    </script>
+                    <th:block th:utext="${theme.config.comment.comment_list[0].comment_giscus_code}"></th:block>
+
+                </th:block>
+            </th:block>
+
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
 
 
 </div>
