@@ -203,6 +203,16 @@ spec:
       label: 文章设置
       formSchema:
         - $formkit: radio
+          name: ac_author
+          label: 是否显示文章作者
+          help: "默认不启用"
+          value: 0
+          options:
+            - value: 0
+              label: 不启用
+            - value: 1
+              label: 启用
+        - $formkit: radio
           name: ac_no_indent
           label: 是否启用文章首行缩进
           help: "默认不启用"
@@ -224,6 +234,53 @@ spec:
               label: 只显示所属分类
             - value: 0
               label: 关闭
+
+    - group: comment
+      label: 评论设置
+      formSchema:
+        - $formkit: repeater
+          name: comment_list
+          label: 是否开启评论
+          help: ""
+          value: [{"comment_enabled":1,"comment_type":1}]
+          max: 5
+          min: 1
+          addButton: false
+          removeControl: false
+          insertControl: false
+          upControl: false
+          downControl: false
+          children:
+            - $formkit: select
+              name: comment_enabled
+              id: comment_enabled
+              label: 是否启用
+              value: 1
+              options:
+               - label: 是
+                 value: 1
+               - label: 否
+                 value: 0
+            - $formkit: select
+                # 在 Repeater 中进行条件判断的方式，当 enabled 为 true 时才显示
+              if: "$value.comment_enabled === 1"
+              id: comment_type
+              name: comment_type
+              label: 选择评论系统类型
+              value: 1
+              options:
+                - label: Halo内置评论系统
+                  value: 1
+                - label: Giscus评论系统
+                  value: 2
+            - $formkit: code
+              if: "$value.comment_type === 2 && $value.comment_enabled === 1"
+              name: comment_giscus_code
+              id: comment_giscus_code
+              label: Giscus评论系统代码注入
+              help: Giscus配置参考 https://giscus.app, 将生成的JavaScript代码粘贴至此处
+              value: ""
+              language: javascript
 
     - group: social
       label: 社交设置

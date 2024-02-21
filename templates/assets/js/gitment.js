@@ -691,7 +691,7 @@ var Gitment =
                 return executeAction("", action);
             }
             function log(msg) {
-                console.log(msg);
+                // console.log(msg);
                 return msg;
             }
             function whyRun(thing, prop) {

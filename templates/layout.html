@@ -6,7 +6,7 @@
 <head th:replace="_partial/head"></head>
 <!-- head f e-->
 <body>
-
+<div class="backToTop" id="top" title="返回顶部">返回顶部</div>
 <div class="site-nav-toggle" id="site-nav-toggle">
     <button>
         <span class="btn-bar"></span>
@@ -79,13 +79,13 @@
 
     var post_obj = /*[[${post.content.content}]]*/ '';
 
-    if (post_obj!=null){
+    if (post_obj != null) {
         var catalog = createCatalog(post_obj);
         var toc = getCatalog(catalog);
         replaceCatalog(toc);
     }
     var page_obj = /*[[${singlePage.content.content}]]*/ '';
-    if (page_obj!=null){
+    if (page_obj != null) {
         var catalog = createCatalog(page_obj);
         var toc = getCatalog(catalog);
         replaceCatalog(toc);
@@ -94,9 +94,9 @@
 </script>
 <script th:src="@{/assets/js/index.js?v={version}(version=${theme.spec.version})}"></script>
 <!--busuanzi js control s-->
-<!--<th:block th:if="${theme.config.count.ac_count_p==2}">-->
+
 <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!--</th:block>-->
+
 <!--busuanzi js control e-->
 
 </body>

@@ -321,9 +321,9 @@ if(!toc || !toc.children || !toc.children[0]){
                 minTopsValue = item
             }
 
-            console.log(minTopsValue, minTop)
+            // console.log(minTopsValue, minTop)
         }
-        console.log(minTopsValue+"-")
+        // console.log(minTopsValue+"-")
         if (minTopsValue) {
             // console.log("-----")
             for (let item of result) {
@@ -417,11 +417,36 @@ function getCatalog() {
 }
 function replaceCatalog(newIndex) {
     var tocElement = document.getElementById("toc"); // 获取要替换的目标元素
-    console.log(tocElement.classList); // 查看元素的类名列表
+    // console.log(tocElement.classList); // 查看元素的类名列表
 
     if (tocElement) {
         tocElement.outerHTML = newIndex; // 替换目标元素的内容
     }
 }
+// back to top
+var topButton = document.getElementById("top"),
+    threshold = 100
+function toggle(){
+    if (document.documentElement.scrollTop > threshold){
+        topButton.style.display = 'block'
+    } else {
+        topButton.style.display = 'none'
+    }
+}
+function scroll(a, b) {
+    needScrollTop = b - a, _currentY = a, "undefined" == typeof window.getComputedStyle(document.documentElement).scrollBehavior ? setTimeout(function() {
+        const a = Math.ceil(needScrollTop / 10);
+        _currentY += a, window.scrollTo(_currentY, b), needScrollTop > 10 || -10 > needScrollTop ? scroll(_currentY, b) : window.scrollTo(_currentY, b)
+    }, 1) : window.scrollTo({
+        left: _currentY,
+        top: b,
+        behavior: "smooth"
+    })
+}
+window.addEventListener('scroll', toggle);
+topButton.addEventListener("click",function (e) {
+    e.preventDefault();
+    scroll(window.pageYOffset, 0)
+})
 
 

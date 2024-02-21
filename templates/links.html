@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:replace="~{layout :: html(title ='友链展示 - '+${site.title},head = null,content = ~{::links},pager = null)}"
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{layout :: html(title ='友链展示 - '+${site.title},head = null,content = ~{::links},pager = null)}"
 >
 <div class="post-content no-indent" th:fragment="links">
 
@@ -7,9 +8,11 @@
     <th:block th:each="group : ${groups}">
         <h6 th:text="${group.spec.displayName}"></h6>
         <th:block th:each="link : ${group.links}" :key="i" th:href="${link.spec.url}" target="_blank">
-        <ul>
-            <li><span th:text="${link.spec.displayName}+': '"></span><a target="_blank" rel="noopener" th:href="${link.spec.url}" th:text="${link.spec.url}"></a></li>
-        </ul>
+            <ul>
+                <li><span th:text="${link.spec.displayName}+': '"></span><a target="_blank" rel="noopener"
+                                                                            th:href="${link.spec.url}"
+                                                                            th:text="${link.spec.url}"></a></li>
+            </ul>
         </th:block>
     </th:block>
     <div id="comment-container"></div>

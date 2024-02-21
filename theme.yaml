@@ -13,5 +13,5 @@ spec:
   repo: "https://github.com/bit15k/halo-theme-aircloud"
   settingName: "AirCloud-setting"
   configMapName: "AirCloud-configMap"
-  version: "1.0.1"
+  version: 1.1.0
   require: ">=2.12.0"
