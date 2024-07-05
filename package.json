@@ -1,0 +1,19 @@
+{
+  "name": "theme-aircloud",
+  "version": "1.1.1",
+  "description": "Halo Theme AirCloud",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tocbot": "^4.28.2",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "watchify": "^4.0.0"
+  }
+}

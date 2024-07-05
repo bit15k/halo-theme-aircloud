@@ -6,12 +6,12 @@ spec:
   displayName: AirCloud
   author:
     name: bit15k
-    website: "https://bytevoyage.site"
+    website: "https://www.logdict.com"
   description: AirCloud 是一个简洁轻量的 hexo 博客主题，旨在将中心放在博文本身.
   logo: "https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/avatar.jpg"
-  website: "https://bytevoyage.site"
+  website: "https://www.logdict.com/archives/AirCloud"
   repo: "https://github.com/bit15k/halo-theme-aircloud"
   settingName: "AirCloud-setting"
   configMapName: "AirCloud-configMap"
-  version: 1.1.0
+  version: 1.1.1
   require: ">=2.12.0"

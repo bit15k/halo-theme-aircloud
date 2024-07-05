@@ -43,8 +43,8 @@
         </th:block>
     </div>
 
-    <div th:class="${theme.config.post.ac_no_indent==1}? 'post-content no-indent':'post-content'">
-        <div th:utext="${post.content.content}"></div>
+    <div th:class="${theme.config.post.ac_no_indent==1}? 'post-content no-indent':'post-content' ">
+        <div th:utext="${post.content.content}" class="js-toc-content"></div>
         <!--捐赠待做-->
         <br/>
         <!-- default comment halo comment s     -->

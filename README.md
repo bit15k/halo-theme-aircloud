@@ -1,30 +1,29 @@
 
 <div align="center">
-<a href="https://bytevoyage.site/archives" target="_blank">
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank">
 <img width="100px" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/avatar.jpg">
 </a>
-<h1 align="center"> <a href="https://bytevoyage.site" target="_blank">Halo Theme AirCloud</a></h1>
+<h1 align="center"> <a href="https://www.logdict.com/archives/AirCloud" target="_blank">Halo Theme AirCloud</a></h1>
 <p align="center"> 
 <a href="https://halo.run" target="_blank"><img src="https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbit15k%2Fhalo-theme-aircloud%2Fmain%2Ftheme.yaml&query=%24.spec.require&style=plastic&label=halo&labelColor=blue&color=brown"/></a>
-<a href="https://bytevoyage.site" target="_blank"><img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud?include_prereleases&display_name=release&style=plastic&color=blue"/></a>
-<a href="https://bytevoyage.site" target="_blank"><img alt="size" src="https://img.shields.io/github/languages/code-size/bit15k/halo-theme-aircloud?&style=plastic"/></a>
-<a href="https://bytevoyage.site" target="_blank"><img alt="commits" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-aircloud?&style=plastic"/></a>
-<a href="https://halo.run" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange?&style=plastic" alt="License"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img src="https://img.shields.io/github/v/release/bit15k/halo-theme-aircloud?include_prereleases&display_name=release&style=plastic&color=blue"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="size" src="https://img.shields.io/github/languages/code-size/bit15k/halo-theme-aircloud?&style=plastic"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img alt="commits" src="https://img.shields.io/github/last-commit/bit15k/halo-theme-aircloud?&style=plastic"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange?&style=plastic" alt="License"/></a>
 </p>
 <p align="center">
-<a href="https://bytevoyage.site" target="_blank"><img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg"/></a>
+<a href="https://www.logdict.com/archives/AirCloud" target="_blank"><img width="50%" src="https://cdn.jsdelivr.net/gh/bit15k/halo-theme-aircloud/templates/assets/imgs/aircloud-theme.jpg"/></a>
 </p>
 <p align="center">
 
-[主题预览](https://bytevoyage.site) | [快速上手](https://bytevoyage.site/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://bytevoyage.site/archives/AirCloud) 
+[主题预览](#主题预览图) | [快速上手](https://www.logdict.com/archives/AirCloud#%E4%B8%BB%E9%A2%98%E4%B8%8B%E8%BD%BD) | [使用文档](https://www.logdict.com/archives/AirCloud) 
 
 </p>
 </div>
 
-## 主题预览
-|    站点名称    |          站点地址           |
-|:----------:|:-----------------------:|
-| ByteVoyage | https://bytevoyage.site  |
+## 主题预览图
+![](https://cdn.jsdelivr.net/gh/bit15k/imgchr/imgs/202407051310024.png)
+![](https://cdn.jsdelivr.net/gh/bit15k/imgchr/imgs/202407051310730.png)
 
 ## 主题介绍
 
@@ -46,32 +45,16 @@
 
 **推荐使用, 后续可收到更新**  
 
-1. Halo 安装[应用市场](https://www.halo.run/store/apps/app-VYJbF)插件( **Halo>=2.10.0 已内置无需安装** )
-2. 直接在应用市场中搜索 AirCloud 安装
+- [Halo 应用市场](https://www.halo.run/store/apps/app-ZUaYf) 直接下载安装
+
 
 ### 本地安装
 
-1. [点击此处下载](https://disk.bytevoyage.site/s/KbUQ?path=%2F) 或在 [ Release](https://github.com/bit15k/halo-theme-aircloud/releases) 页面 `下载` 最新主题包 (zip)
+1.  [ Github Release](https://github.com/bit15k/halo-theme-aircloud/releases) 页面 `下载` 最新主题包 (zip)
 2. 进入 Halo 后台 -> 主题 (左侧面板)
 3. 点击右上角 “主题”， 在弹出的窗口中选择 `安装主题`
 4. 选择下载好的主题包（zip）
 5. 安装完成后的主题将会出现在 “未安装” 内，点击 `启用主题`
-
-
-
-### 远程安装
-
-方式一  
-
-Halo 应用市场网页直接进行远程安装：https://www.halo.run/store/apps/app-ZUaYf  
-( 适用于 Halo>=2.6.0 且有外网访问地址)  
-
-方法二    
-
-1. 复制地址 `https://github.com/bit15k/halo-theme-aircloud/archive/refs/heads/main.zip`
-2. 进入Halo后台 -> 外观 -> 主题 (左侧面板)
-3. 点击右上方 `安装` 按钮, 然后选择 `远程下载`
-4. 在文本框中粘贴仓库地址后点击下载
 
 
 
@@ -107,10 +90,10 @@ Halo 应用市场网页直接进行远程安装：https://www.halo.run/store/app
 
 ## 使用说明
 
-> 详细使用说明参考 https://bytevoyage.site/archives/AirCloud
+> 详细使用说明参考 https://www.logdict.com/archives/AirCloud
 
 ## 问题联系
 
-本页面提 issue, 或到 [https://bytevoyage.site](https://bytevoyage.site) 留言
+本页面提 issue, 或到 [https://www.logdict.com/archives/AirCloud](https://www.logdict.com/archives/AirCloud) 留言
 
 
