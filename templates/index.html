@@ -31,7 +31,7 @@
                     </th:block>
                 </th:block>
                 <th:block th:if="${theme.config.post.ac_index_post_tag==2}">
-                    <th:blocak th:if="${#lists.size(post.categories)>0}">
+                    <th:block th:if="${#lists.size(post.categories)>0}">
                         <p>
                             <span>/</span>
                             <span th:each="c:${post.categories}">
@@ -39,7 +39,7 @@
                     </span>
                         </p>
                         <!--                    <span>/</span>-->
-                    </th:blocak>
+                    </th:block>
                     <th:block th:if="${#lists.size(post.categories)==0}">
                         <p>
                             <span>&nbsp;</span>
@@ -84,7 +84,7 @@
                     </th:block>
                 </th:block>
                 <th:block th:if="${theme.config.post.ac_index_post_tag==2}">
-                    <th:blocak th:if="${#lists.size(post.categories)>0}">
+                    <th:block th:if="${#lists.size(post.categories)>0}">
                         <p>
                             <span>/</span>
                             <span th:each="c:${post.categories}">
@@ -92,7 +92,7 @@
                     </span>
                         </p>
                         <!--                    <span>/</span>-->
-                    </th:blocak>
+                    </th:block>
                     <th:block th:if="${#lists.size(post.categories)==0}">
                         <p>
                             <span>&nbsp;</span>
