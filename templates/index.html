@@ -5,58 +5,112 @@
 <div class="post-preview-container" style="min-height: 720px" th:fragment="content">
     <!--post list s-->
     <div class="post-preview" th:each="post : ${posts.items}">
-
-        <div class="post-time" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></div>
-        <div class="post-info">
-            <a th:href="${post.status.permalink}">
-                <h3 th:text="${post.spec.title}"></h3>
-            </a>
-            <!--post tag s-->
-            <th:block th:if="${theme.config.post.ac_index_post_tag==1}">
-                <th:block th:if="${#lists.size(post.tags)>0}">
-                    <p>
-                        <span>/</span>
-                        <span th:each="tag:${post.tags}">
+        <th:block th:if="${post.spec.pinned == true}">
+            <div class="post-time" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></div>
+            <div class="post-info">
+                <a th:href="${post.status.permalink}">
+                    <h3><span th:text="${post.spec.title}" style="font-weight: bold"></span></h3>
+                </a>
+                <!--post tag s-->
+                <th:block th:if="${theme.config.post.ac_index_post_tag==1}">
+                    <th:block th:if="${#lists.size(post.tags)>0}">
+                        <p>
+                            <span>/</span>
+                            <span th:each="tag:${post.tags}">
                     <a class="tag" th:href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
                 </span>
-                    </p>
-                    <!--                    <span>/</span>-->
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                    <th:block th:if="${#lists.size(post.tags)==0}">
+                        <p>
+                            <span>&nbsp;</span>
+                            <span>&nbsp;</span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
                 </th:block>
-                <th:block th:if="${#lists.size(post.tags)==0}">
-                    <p>
-                        <span>&nbsp;</span>
-                        <span>&nbsp;</span>
-                    </p>
-                    <!--                    <span>/</span>-->
-                </th:block>
-            </th:block>
-            <th:block th:if="${theme.config.post.ac_index_post_tag==2}">
-                <th:blocak th:if="${#lists.size(post.categories)>0}">
-                    <p>
-                        <span>/</span>
-                        <span th:each="c:${post.categories}">
+                <th:block th:if="${theme.config.post.ac_index_post_tag==2}">
+                    <th:block th:if="${#lists.size(post.categories)>0}">
+                        <p>
+                            <span>/</span>
+                            <span th:each="c:${post.categories}">
                         <a class="tag" th:href="${c.status.permalink}" th:text="${c.spec.displayName}+' /'"></a>
                     </span>
-                    </p>
-                    <!--                    <span>/</span>-->
-                </th:blocak>
-                <th:block th:if="${#lists.size(post.categories)==0}">
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                    <th:block th:if="${#lists.size(post.categories)==0}">
+                        <p>
+                            <span>&nbsp;</span>
+                            <span>&nbsp;</span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                </th:block>
+                <th:block th:if="${theme.config.post.ac_index_post_tag==0}">
+
                     <p>
                         <span>&nbsp;</span>
                         <span>&nbsp;</span>
                     </p>
-                    <!--                    <span>/</span>-->
                 </th:block>
-            </th:block>
-            <th:block th:if="${theme.config.post.ac_index_post_tag==0}">
+                <!--post tag e-->
+            </div>
+        </th:block>
+        <th:block th:if="${post.spec.pinned == false}">
+            <div class="post-time" th:text="${#dates.format(post.spec.publishTime, 'yyyy-MM-dd')}"></div>
+            <div class="post-info">
+                <a th:href="${post.status.permalink}">
+                    <h3 th:text="${post.spec.title}"></h3>
+                </a>
+                <!--post tag s-->
+                <th:block th:if="${theme.config.post.ac_index_post_tag==1}">
+                    <th:block th:if="${#lists.size(post.tags)>0}">
+                        <p>
+                            <span>/</span>
+                            <span th:each="tag:${post.tags}">
+                    <a class="tag" th:href="${tag.status.permalink}" th:text="${tag.spec.displayName}+' /'"></a>
+                </span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                    <th:block th:if="${#lists.size(post.tags)==0}">
+                        <p>
+                            <span>&nbsp;</span>
+                            <span>&nbsp;</span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                </th:block>
+                <th:block th:if="${theme.config.post.ac_index_post_tag==2}">
+                    <th:block th:if="${#lists.size(post.categories)>0}">
+                        <p>
+                            <span>/</span>
+                            <span th:each="c:${post.categories}">
+                        <a class="tag" th:href="${c.status.permalink}" th:text="${c.spec.displayName}+' /'"></a>
+                    </span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                    <th:block th:if="${#lists.size(post.categories)==0}">
+                        <p>
+                            <span>&nbsp;</span>
+                            <span>&nbsp;</span>
+                        </p>
+                        <!--                    <span>/</span>-->
+                    </th:block>
+                </th:block>
+                <th:block th:if="${theme.config.post.ac_index_post_tag==0}">
 
-                <p>
-                    <span>&nbsp;</span>
-                    <span>&nbsp;</span>
-                </p>
-            </th:block>
-            <!--post tag e-->
-        </div>
+                    <p>
+                        <span>&nbsp;</span>
+                        <span>&nbsp;</span>
+                    </p>
+                </th:block>
+                <!--post tag e-->
+            </div>
+        </th:block>
     </div>
     <!--post list e-->
 
